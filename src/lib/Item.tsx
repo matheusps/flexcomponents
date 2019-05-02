@@ -1,57 +1,15 @@
 import React, { FC } from 'react'
-
-interface Item extends HTMLDivElement {
-  /** tag of the container */
-  tag?:
-    | 'div'
-    | 'section'
-    | 'article'
-    | 'aside'
-    | 'details'
-    | 'dialog'
-    | 'figure'
-    | 'footer'
-    | 'header'
-    | 'main'
-    | 'nav'
-  /** width in percentage or px */
-  width?: string
-  /** if is inline-flex */
-  inline?: boolean
-  /** flex-direction */
-  direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse'
-  /** flex-wrap */
-  wrap?: 'nowrap' | 'wrap' | 'wrap-reverse'
-  /** justify-content */
-  justify?:
-    | 'flex-start'
-    | 'flex-end'
-    | 'center'
-    | 'space-between'
-    | 'space-around'
-    | 'space-evenly'
-  /** align-items */
-  items?: 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
-  /** align-content */
-  content?:
-    | 'flex-start'
-    | 'flex-end'
-    | 'center'
-    | 'space-between'
-    | 'space-around'
-    | 'stretch'
-}
+import { Item } from './types'
 
 const FlexItem: FC<Item> = props => {
   const {
     tag: Tag,
-    inline,
     width,
-    direction,
-    wrap,
-    justify,
-    items,
-    content,
+    order,
+    shrink,
+    grow,
+    self,
+    basis,
     style,
     children,
     ...rest
@@ -59,13 +17,12 @@ const FlexItem: FC<Item> = props => {
   return (
     <Tag
       style={{
-        display: inline ? 'inline-flex' : 'flex',
         width: width,
-        flexDirection: direction,
-        flexWrap: wrap,
-        justifyContent: justify,
-        alignItems: items,
-        alignContent: content,
+        order: order,
+        flexShrink: shrink,
+        flexGrow: grow,
+        flexBasis: basis,
+        alignSelf: self,
         ...style
       }}
       {...rest}
@@ -78,12 +35,11 @@ const FlexItem: FC<Item> = props => {
 FlexItem.defaultProps = {
   tag: 'div',
   width: '100%',
-  inline: false,
-  direction: 'row',
-  wrap: 'nowrap',
-  justify: 'flex-start',
-  items: 'stretch',
-  content: 'stretch'
+  order: 0,
+  shrink: 1,
+  grow: 0,
+  self: 'auto',
+  basis: 'auto'
 }
 
 export default FlexItem

@@ -1,3 +1,4 @@
 import FlexContainer from './Container'
+import FlexItem from './Item'
 
-export { FlexContainer }
+export { FlexContainer, FlexItem }
