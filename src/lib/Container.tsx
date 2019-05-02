@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { Container } from './types'
+import { containerDefaultProps } from './defaultProps'
 
 const FlexContainer: FC<Container> = props => {
   const {
@@ -44,20 +45,6 @@ const FlexContainer: FC<Container> = props => {
   )
 }
 
-FlexContainer.defaultProps = {
-  tag: 'div',
-  width: '100%',
-  inline: false,
-  direction: 'row',
-  wrap: 'nowrap',
-  justify: 'flex-start',
-  items: 'stretch',
-  content: 'stretch',
-  order: 0,
-  shrink: 1,
-  grow: 0,
-  self: 'auto',
-  basis: 'auto'
-}
+FlexContainer.defaultProps = containerDefaultProps
 
 export default FlexContainer

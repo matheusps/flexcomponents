@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { Item } from './types'
+import { itemDefaultProps } from './defaultProps'
 
 const FlexItem: FC<Item> = props => {
   const {
@@ -32,14 +33,6 @@ const FlexItem: FC<Item> = props => {
   )
 }
 
-FlexItem.defaultProps = {
-  tag: 'div',
-  width: '100%',
-  order: 0,
-  shrink: 1,
-  grow: 0,
-  self: 'auto',
-  basis: 'auto'
-}
+FlexItem.defaultProps = itemDefaultProps
 
 export default FlexItem
