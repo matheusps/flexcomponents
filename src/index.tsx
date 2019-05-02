@@ -7,10 +7,8 @@ import './styles.css'
 function App() {
   return (
     <div className="App">
-      <FlexContainer tag="article" direction="row">
-        <FlexItem grow={2} width="50%">
-          <h1>Hello CodeSandbox</h1>
-        </FlexItem>
+      <FlexContainer direction="row">
+        <h1>Hello CodeSandbox</h1>
         <h2>Start editing to see some magic happen!</h2>
       </FlexContainer>
     </div>

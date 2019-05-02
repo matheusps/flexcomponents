@@ -1,17 +1,7 @@
-export interface Item extends HTMLDivElement {
-  /** tag of the item */
-  tag?:
-    | 'div'
-    | 'section'
-    | 'article'
-    | 'aside'
-    | 'details'
-    | 'dialog'
-    | 'figure'
-    | 'footer'
-    | 'header'
-    | 'main'
-    | 'nav'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
+
+export interface Item
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   /** width in percentage or px */
   width?: string
   /** element order */
@@ -28,19 +18,6 @@ export interface Item extends HTMLDivElement {
 
 /** A container itself can be an item */
 export interface Container extends Item {
-  /** tag of the container */
-  tag?:
-    | 'div'
-    | 'section'
-    | 'article'
-    | 'aside'
-    | 'details'
-    | 'dialog'
-    | 'figure'
-    | 'footer'
-    | 'header'
-    | 'main'
-    | 'nav'
   /** width in percentage or px */
   width?: string
   /** if is inline-flex */

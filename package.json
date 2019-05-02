@@ -5,6 +5,8 @@
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
+    "@emotion/core": "10.0.10",
+    "@emotion/styled": "10.0.10",
     "react": "16.8.4",
     "react-dom": "16.8.4",
     "react-scripts": "2.1.3"
