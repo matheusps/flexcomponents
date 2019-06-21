@@ -12,3 +12,305 @@ import { FlexContainer, FlexItem } from '../index.tsx'
     <FlexItem>A</FlexItem> <FlexItem>B</FlexItem> <FlexItem>C</FlexItem>
   </FlexContainer>
 </Playground>
+
+## Flexbox direction
+
+### Row
+
+<Playground>
+  <FlexContainer direction="row">
+    <FlexItem>1</FlexItem>
+    <FlexItem>2</FlexItem>
+    <FlexItem>3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Row Reverse
+
+<Playground>
+  <FlexContainer direction="row-reverse">
+    <FlexItem>1</FlexItem>
+    <FlexItem>2</FlexItem>
+    <FlexItem>3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Column
+
+<Playground>
+  <FlexContainer direction="column">
+    <FlexItem>1</FlexItem>
+    <FlexItem>2</FlexItem>
+    <FlexItem>3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Column Reverse
+
+<Playground>
+  <FlexContainer direction="column-reverse">
+    <FlexItem>1</FlexItem>
+    <FlexItem>2</FlexItem>
+    <FlexItem>3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+## Flexbox wrap
+
+### Wrap
+
+<Playground>
+  <FlexContainer wrap="wrap">
+    <FlexItem width="30%">1</FlexItem>
+    <FlexItem width="30%">2</FlexItem>
+    <FlexItem width="30%">3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Wrap Reverse
+
+<Playground>
+  <FlexContainer wrap="wrap-reverse">
+    <FlexItem width="30%">1</FlexItem>
+    <FlexItem width="30%">2</FlexItem>
+    <FlexItem width="30%">3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+## Flexbox align-items
+
+### Flex start
+
+<Playground>
+  <FlexContainer items="flex-start">
+    <FlexItem>
+      1 <br /> 1 <br /> 1
+    </FlexItem>
+    <FlexItem>
+      2 <br /> 2
+    </FlexItem>
+    <FlexItem>3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Flex end
+
+<Playground>
+  <FlexContainer items="flex-end">
+    <FlexItem>
+      1 <br /> 1 <br /> 1
+    </FlexItem>
+    <FlexItem>
+      2 <br /> 2
+    </FlexItem>
+    <FlexItem>3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Center
+
+<Playground>
+  <FlexContainer items="center">
+    <FlexItem>
+      1 <br /> 1 <br /> 1
+    </FlexItem>
+    <FlexItem>
+      2 <br /> 2
+    </FlexItem>
+    <FlexItem>3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Baseline
+
+<Playground>
+  <FlexContainer items="baseline">
+    <FlexItem>
+      1 <br /> 1 <br /> 1
+    </FlexItem>
+    <FlexItem>
+      2 <br /> 2
+    </FlexItem>
+    <FlexItem>3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Stretch
+
+<Playground>
+  <FlexContainer items="stretch">
+    <FlexItem>
+      1 <br /> 1 <br /> 1
+    </FlexItem>
+    <FlexItem>
+      2 <br /> 2
+    </FlexItem>
+    <FlexItem>3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+## Flexbox justify-content
+
+### Flex start
+
+<Playground>
+  <FlexContainer justify="flex-start">
+    <FlexItem width="20%">1</FlexItem>
+    <FlexItem width="20%">2</FlexItem>
+    <FlexItem width="20%">3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Flex end
+
+<Playground>
+  <FlexContainer justify="flex-end">
+    <FlexItem width="20%">1</FlexItem>
+    <FlexItem width="20%">2</FlexItem>
+    <FlexItem width="20%">3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Center
+
+<Playground>
+  <FlexContainer justify="center">
+    <FlexItem width="20%">1</FlexItem>
+    <FlexItem width="20%">2</FlexItem>
+    <FlexItem width="20%">3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Space between
+
+<Playground>
+  <FlexContainer justify="space-between">
+    <FlexItem width="20%">1</FlexItem>
+    <FlexItem width="20%">2</FlexItem>
+    <FlexItem width="20%">3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Space around
+
+<Playground>
+  <FlexContainer justify="space-around">
+    <FlexItem width="20%">1</FlexItem>
+    <FlexItem width="20%">2</FlexItem>
+    <FlexItem width="20%">3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Space evenly
+
+<Playground>
+  <FlexContainer justify="space-evenly">
+    <FlexItem width="20%">1</FlexItem>
+    <FlexItem width="20%">2</FlexItem>
+    <FlexItem width="20%">3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+## Flexbox align-content
+
+### Flex start
+
+<Playground>
+  <FlexContainer height="20rem" content="flex-start" wrap="wrap">
+    <FlexItem width="10rem">1</FlexItem>
+    <FlexItem width="20rem">2</FlexItem>
+    <FlexItem width="15rem">3</FlexItem>
+    <FlexItem width="5rem">4</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Flex end
+
+<Playground>
+  <FlexContainer height="20rem" content="flex-end" wrap="wrap">
+    <FlexItem width="10rem">1</FlexItem>
+    <FlexItem width="20rem">2</FlexItem>
+    <FlexItem width="15rem">3</FlexItem>
+    <FlexItem width="5rem">4</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Center
+
+<Playground>
+  <FlexContainer height="20rem" content="center" wrap="wrap">
+    <FlexItem width="10rem">1</FlexItem>
+    <FlexItem width="20rem">2</FlexItem>
+    <FlexItem width="15rem">3</FlexItem>
+    <FlexItem width="5rem">4</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Space between
+
+<Playground>
+  <FlexContainer height="20rem" content="space-between" wrap="wrap">
+    <FlexItem width="10rem">1</FlexItem>
+    <FlexItem width="20rem">2</FlexItem>
+    <FlexItem width="15rem">3</FlexItem>
+    <FlexItem width="5rem">4</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Space around
+
+<Playground>
+  <FlexContainer height="20rem" content="space-around" wrap="wrap">
+    <FlexItem width="10rem">1</FlexItem>
+    <FlexItem width="20rem">2</FlexItem>
+    <FlexItem width="15rem">3</FlexItem>
+    <FlexItem width="5rem">4</FlexItem>
+  </FlexContainer>
+</Playground>
+
+### Stretch
+
+<Playground>
+  <FlexContainer height="20rem" content="stretch" wrap="wrap">
+    <FlexItem width="10rem">1</FlexItem>
+    <FlexItem width="20rem">2</FlexItem>
+    <FlexItem width="15rem">3</FlexItem>
+    <FlexItem width="5rem">4</FlexItem>
+  </FlexContainer>
+</Playground>
+
+## Flexbox order
+
+<Playground>
+  <FlexContainer>
+    <FlexItem order="3">1</FlexItem>
+    <FlexItem order="1">2</FlexItem>
+    <FlexItem order="2">3</FlexItem>
+  </FlexContainer>
+</Playground>
+
+## Flexbox shrink
+
+<Playground>
+  <FlexContainer width="100%">
+    <FlexItem shrink="lg" width="100%">
+      1
+    </FlexItem>
+    <FlexItem shrink="sm" width="100%">
+      2
+    </FlexItem>
+    <FlexItem shrink="md" width="100%">
+      3
+    </FlexItem>
+  </FlexContainer>
+</Playground>
+
+## Flexbox grow
+
+<Playground>
+  <FlexContainer>
+    <FlexItem grow={2}>1</FlexItem>
+    <FlexItem grow={0}>2</FlexItem>
+    <FlexItem grow={1}>3</FlexItem>
+  </FlexContainer>
+</Playground>
