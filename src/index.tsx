@@ -1,19 +1,63 @@
-import * as React from 'react'
-import { render } from 'react-dom'
-import { FlexContainer, FlexItem } from './lib'
+import React, { FC } from 'react'
 
-import './styles.css'
+const FlexContainer: FC<Container> = ({ children, ...props }) => (
+  <div
+    style={{
+      width: props.width,
+      order: props.order,
+      flexShrink: props.shrink,
+      flexGrow: props.grow,
+      flexBasis: props.basis,
+      alignSelf: props.self,
+      display: props.inline ? 'inline-flex' : 'flex',
+      flexDirection: props.direction,
+      flexWrap: props.wrap,
+      justifyContent: props.justify,
+      alignItems: props.items,
+      alignContent: props.content
+    }}
+  >
+    {children}
+  </div>
+)
 
-function App() {
-  return (
-    <div className="App">
-      <FlexContainer direction="row">
-        <h1>Hello CodeSandbox</h1>
-        <h2>Start editing to see some magic happen!</h2>
-      </FlexContainer>
-    </div>
-  )
+const FlexItem: FC<Item> = ({ children, ...props }) => (
+  <div
+    style={{
+      width: props.width,
+      order: props.order,
+      flexShrink: props.shrink,
+      flexGrow: props.grow,
+      flexBasis: props.basis,
+      alignSelf: props.self
+    }}
+  >
+    {children}
+  </div>
+)
+
+FlexItem.defaultProps = {
+  width: '100%',
+  order: 0,
+  shrink: 1,
+  grow: 0,
+  self: 'auto',
+  basis: 'auto'
 }
 
-const rootElement = document.getElementById('root')
-render(<App />, rootElement)
+FlexContainer.defaultProps = {
+  width: '100%',
+  order: 0,
+  shrink: 1,
+  grow: 0,
+  self: 'auto',
+  basis: 'auto',
+  inline: false,
+  direction: 'row',
+  wrap: 'nowrap',
+  justify: 'flex-start',
+  items: 'stretch',
+  content: 'stretch'
+}
+
+export { FlexItem, FlexContainer }

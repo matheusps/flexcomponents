@@ -1,7 +1,9 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react'
+type NativeDiv = DetailedHTMLProps<
+  HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+>
 
-export interface Item
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+interface Item extends NativeDiv {
   /** width in percentage or px */
   width?: string
   /** element order */
@@ -17,7 +19,7 @@ export interface Item
 }
 
 /** A container itself can be an item */
-export interface Container extends Item {
+interface Container extends Item {
   /** width in percentage or px */
   width?: string
   /** if is inline-flex */
