@@ -1,28 +1,41 @@
 import * as React from 'react'
+import { useTheme } from '../hooks/useTheme'
 
-const FlexContainer: React.FC<Container> = ({ children, ...props }) => (
-  <div
-    style={{
-      width: props.width,
-      order: props.order,
-      flexShrink: props.shrink,
-      flexGrow: props.grow,
-      flexBasis: props.basis,
-      alignSelf: props.self,
-      display: props.inline ? 'inline-flex' : 'flex',
-      flexDirection: props.direction,
-      flexWrap: props.wrap,
-      justifyContent: props.justify,
-      alignItems: props.items,
-      alignContent: props.content
-    }}
-  >
-    {children}
-  </div>
-)
+const FlexContainer: React.FC<Container> = ({ children, ...props }) => {
+  const {
+    container: { shadow, padding, margin, radius, on, background }
+  } = useTheme()
+
+  return (
+    <div
+      style={{
+        width: props.width,
+        order: props.order,
+        flexShrink: props.shrink,
+        flexGrow: props.grow,
+        flexBasis: props.basis,
+        alignSelf: props.self,
+        display: props.inline ? 'inline-flex' : 'flex',
+        flexDirection: props.direction,
+        flexWrap: props.wrap,
+        justifyContent: props.justify,
+        alignItems: props.items,
+        alignContent: props.content,
+        boxShadow: shadow,
+        padding: padding,
+        borderRadius: radius,
+        margin: margin,
+        color: on,
+        backgroundColor: background
+      }}
+    >
+      {children}
+    </div>
+  )
+}
 
 FlexContainer.defaultProps = {
-  width: '100%',
+  width: 'auto',
   order: 0,
   shrink: 1,
   grow: 0,

@@ -47,3 +47,22 @@ interface Container extends Item {
     | 'space-around'
     | 'stretch'
 }
+
+interface Theme {
+  container: {
+    background: string
+    on: string
+    shadow: string
+    radius: string
+    margin: string
+    padding: string
+  }
+  item: {
+    background: string
+    on: string
+    shadow: string
+    radius: string
+    margin: string
+    padding: string
+  }
+}
