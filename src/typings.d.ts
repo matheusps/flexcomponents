@@ -50,18 +50,18 @@ interface Container extends Item {
 
 interface Theme {
   container: {
-    background: string
-    on: string
-    shadow: string
-    radius: string
+    backgroundColor: string
+    color: string
+    boxShadow: string
+    borderRadius: string
     margin: string
     padding: string
   }
   item: {
-    background: string
-    on: string
-    shadow: string
-    radius: string
+    backgroundColor: string
+    color: string
+    boxShadow: string
+    borderRadius: string
     margin: string
     padding: string
   }

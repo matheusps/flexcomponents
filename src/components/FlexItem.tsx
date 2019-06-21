@@ -2,9 +2,7 @@ import * as React from 'react'
 import { useTheme } from '../hooks/useTheme'
 
 const FlexItem: React.FC<Item> = ({ children, ...props }) => {
-  const {
-    item: { shadow, padding, margin, radius, on, background }
-  } = useTheme()
+  const { item } = useTheme()
 
   return (
     <div
@@ -16,12 +14,7 @@ const FlexItem: React.FC<Item> = ({ children, ...props }) => {
         flexGrow: props.grow,
         flexBasis: props.basis,
         alignSelf: props.self,
-        boxShadow: shadow,
-        padding: padding,
-        borderRadius: radius,
-        margin: margin,
-        color: on,
-        backgroundColor: background
+        ...item
       }}
     >
       {children}

@@ -2,9 +2,7 @@ import * as React from 'react'
 import { useTheme } from '../hooks/useTheme'
 
 const FlexContainer: React.FC<Container> = ({ children, ...props }) => {
-  const {
-    container: { shadow, padding, margin, radius, on, background }
-  } = useTheme()
+  const { container } = useTheme()
 
   return (
     <div
@@ -21,12 +19,7 @@ const FlexContainer: React.FC<Container> = ({ children, ...props }) => {
         justifyContent: props.justify,
         alignItems: props.items,
         alignContent: props.content,
-        boxShadow: shadow,
-        padding: padding,
-        borderRadius: radius,
-        margin: margin,
-        color: on,
-        backgroundColor: background
+        ...container
       }}
     >
       {children}
