@@ -4,6 +4,8 @@ type NativeDiv = DetailedHTMLProps<
 >
 
 interface Item extends NativeDiv {
+  /** If subscribes to theme provider or not */
+  themed: boolean
   /** width in percentage or px */
   width?: string
   /** element order */
