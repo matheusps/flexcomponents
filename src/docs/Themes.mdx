@@ -1,0 +1,21 @@
+---
+## name: Hooks
+---
+
+import { Playground } from 'docz'
+import { ThemeProvider, useTheme } from '../index.tsx'
+
+# ThemeProvider
+
+<Playground>
+  {() => {
+    const { container } = useTheme()
+    return (
+      <article style={container}>
+        <h1>I am something just like this</h1>
+      </article>
+    )
+
+}}
+
+</Playground>

@@ -1,3 +1,22 @@
+interface Theme {
+  container: {
+    backgroundColor: string
+    color: string
+    boxShadow: string
+    borderRadius: string
+    margin: string
+    padding: string
+  }
+  item: {
+    backgroundColor: string
+    color: string
+    boxShadow: string
+    borderRadius: string
+    margin: string
+    padding: string
+  }
+}
+
 type NativeDiv = DetailedHTMLProps<
   HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
@@ -48,23 +67,4 @@ interface Container extends Item {
     | 'space-between'
     | 'space-around'
     | 'stretch'
-}
-
-interface Theme {
-  container: {
-    backgroundColor: string
-    color: string
-    boxShadow: string
-    borderRadius: string
-    margin: string
-    padding: string
-  }
-  item: {
-    backgroundColor: string
-    color: string
-    boxShadow: string
-    borderRadius: string
-    margin: string
-    padding: string
-  }
 }

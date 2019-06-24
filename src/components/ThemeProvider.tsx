@@ -3,11 +3,13 @@ import ThemeContext from '../context/ThemeContext'
 import { ModernWhite } from '../themes'
 
 interface Props {
-  theme: Theme
+  theme?: Theme
 }
 
 const ThemeProvider: React.FC<Props> = ({ theme, children }) => {
-  return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
+  return (
+    <ThemeContext.Provider value={theme!}>{children}</ThemeContext.Provider>
+  )
 }
 
 ThemeProvider.defaultProps = {
