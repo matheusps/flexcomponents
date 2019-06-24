@@ -3,16 +3,36 @@
   "version": "0.0.1",
   "description": "Use flexbox features easily",
   "keywords": [],
-  "main": "src/index.tsx",
+  "repository": "https://github.com/matheusps/react-flexible.git",
+  "author": "matheusps <cout.matheusps@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^16.8.12",
     "@types/react-dom": "^16.8.3",
+    "@svgr/rollup": "^4.3.0",
     "docz": "^1.2.0",
     "docz-theme-default": "^1.2.0",
     "typescript": "3.3.3",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "rollup": "^1.15.6",
+    "rollup-plugin-alias": "^1.5.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.3",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-typescript2": "^0.21.2",
+    "rollup-plugin-url": "^2.2.2"
   },
   "peerDependencies": {
     "react": "16.8.6",
