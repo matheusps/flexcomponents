@@ -25,8 +25,6 @@ type NativeDiv = DetailedHTMLProps<
 interface Item extends NativeDiv {
   /** If subscribes to theme provider or not */
   themed: boolean
-  /** width in percentage or px */
-  width?: string
   /** element order */
   order?: number
   /** element grow */
@@ -41,8 +39,6 @@ interface Item extends NativeDiv {
 
 /** A container itself can be an item */
 interface Container extends Item {
-  /** width in percentage or px */
-  width?: string
   /** if is inline-flex */
   inline?: boolean
   /** flex-direction */

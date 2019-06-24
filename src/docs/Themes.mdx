@@ -3,19 +3,16 @@
 ---
 
 import { Playground } from 'docz'
-import { ThemeProvider, useTheme } from '../index.tsx'
+import { ThemeProvider, FlexContainer, FlexItem } from '../index.tsx'
 
 # ThemeProvider
 
 <Playground>
-  {() => {
-    const { container } = useTheme()
-    return (
-      <article style={container}>
-        <h1>I am something just like this</h1>
-      </article>
-    )
-
-}}
-
+  <ThemeProvider>
+    <FlexContainer direction="row">
+      <FlexItem>1</FlexItem>
+      <FlexItem>2</FlexItem>
+      <FlexItem>3</FlexItem>
+    </FlexContainer>
+  </ThemeProvider>
 </Playground>

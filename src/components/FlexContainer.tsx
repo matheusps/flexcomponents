@@ -8,7 +8,6 @@ const FlexContainer: React.FC<Container> = ({ children, themed, ...props }) => {
   return (
     <div
       style={{
-        width: props.width,
         order: props.order,
         flexShrink: props.shrink,
         flexGrow: props.grow,
@@ -30,7 +29,6 @@ const FlexContainer: React.FC<Container> = ({ children, themed, ...props }) => {
 
 FlexContainer.defaultProps = {
   themed: true,
-  width: 'auto',
   order: 0,
   shrink: 1,
   grow: 0,

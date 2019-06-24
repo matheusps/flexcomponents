@@ -9,7 +9,6 @@ const FlexItem: React.FC<Item> = ({ children, themed, ...props }) => {
     <div
       style={{
         display: 'flex',
-        width: props.width,
         order: props.order,
         flexShrink: props.shrink,
         flexGrow: props.grow,
@@ -25,7 +24,6 @@ const FlexItem: React.FC<Item> = ({ children, themed, ...props }) => {
 
 FlexItem.defaultProps = {
   themed: true,
-  width: 'auto',
   order: 0,
   shrink: 1,
   grow: 0,
