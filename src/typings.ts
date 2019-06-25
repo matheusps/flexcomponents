@@ -26,7 +26,7 @@ export type NativeDiv = DetailedHTMLProps<
 
 export interface Item extends NativeDiv {
   /** If subscribes to theme provider or not */
-  themed: boolean
+  themed?: boolean
   /** element order */
   order?: number
   /** element grow */
