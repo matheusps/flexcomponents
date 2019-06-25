@@ -1,3 +1,5 @@
+import { Theme } from './typings'
+
 export const DarkBlue: Theme = {
   container: {
     backgroundColor: '#10101C',

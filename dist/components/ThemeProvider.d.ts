@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Theme } from '../typings';
 interface Props {
     theme?: Theme;
 }

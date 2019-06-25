@@ -1,4 +1,6 @@
-interface Theme {
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
+
+export interface Theme {
   container: {
     backgroundColor: string
     color: string
@@ -17,12 +19,12 @@ interface Theme {
   }
 }
 
-type NativeDiv = DetailedHTMLProps<
+export type NativeDiv = DetailedHTMLProps<
   HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 >
 
-interface Item extends NativeDiv {
+export interface Item extends NativeDiv {
   /** If subscribes to theme provider or not */
   themed: boolean
   /** element order */
@@ -38,7 +40,7 @@ interface Item extends NativeDiv {
 }
 
 /** A container itself can be an item */
-interface Container extends Item {
+export interface Container extends Item {
   /** if is inline-flex */
   inline?: boolean
   /** flex-direction */

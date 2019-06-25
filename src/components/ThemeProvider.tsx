@@ -1,6 +1,7 @@
 import * as React from 'react'
 import ThemeContext from '../context/ThemeContext'
 import { ModernWhite } from '../themes'
+import { Theme } from '../typings'
 
 interface Props {
   theme?: Theme

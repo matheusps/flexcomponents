@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Container } from '../typings'
 import { useTheme } from '../hooks/useTheme'
 
 const FlexContainer: React.FC<Container> = ({ children, themed, ...props }) => {

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { useTheme } from '../hooks/useTheme'
+import { Item } from '../typings'
 
 const FlexItem: React.FC<Item> = ({ children, themed, ...props }) => {
   const { item } = useTheme()

@@ -1,4 +1,4 @@
-declare const useTheme: () => Theme | {
+declare const useTheme: () => import("../typings").Theme | {
     container: {};
     item: {};
 };
