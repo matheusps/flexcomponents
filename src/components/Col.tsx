@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { FlexContainer } from './FlexContainer'
+import { Container } from '../typings'
 
 type GridSize = 'fluid' | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 
-interface ColType {
+interface ColType extends Container {
   size: GridSize
 }
 
@@ -40,20 +41,21 @@ const getPercentage = (size: GridSize) => {
   }
 }
 
-const Col: React.FC<ColType> = ({ size, children }) => {
+const Col: React.FC<ColType> = ({ size, style, children, ...props }) => {
   const percentage = `${getPercentage(size)}%`
   return (
     <FlexContainer
       wrap="wrap"
       grow={size === 'fluid' ? 1 : 0}
-      basis={percentage}
+      basis={percentage || 'auto'}
+      shrink={0}
       style={{
-        boxSizing: 'border-box',
-        flex: '0 0 auto',
         paddingRight: '0.5rem',
         paddingLeft: '0.5rem',
-        maxWidth: percentage
+        maxWidth: percentage,
+        ...style
       }}
+      {...props}
     >
       {children}
     </FlexContainer>

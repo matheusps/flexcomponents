@@ -23,17 +23,17 @@ export const ModernWhite: Theme = {
   container: {
     backgroundColor: '#FFFFFF',
     color: '#212436',
-    boxShadow: '0 0.125rem 0.8rem 0 rgba(33, 36, 54, 0.15)',
+    boxShadow: '0 0.125rem 0.8rem 0 rgba(33, 36, 54, 0.05)',
     borderRadius: '1rem',
     margin: '0rem',
-    padding: '1rem'
+    padding: '0rem'
   },
   item: {
     backgroundColor: '#FFFFFF',
     color: '#212436',
-    boxShadow: '0 0.125rem 0.8rem 0 rgba(33, 36, 54, 0.15)',
+    boxShadow: '0 0.125rem 0.8rem 0 rgba(33, 36, 54, 0.05)',
     borderRadius: '1rem',
-    margin: '1rem',
-    padding: '1rem'
+    margin: '0rem',
+    padding: '0rem'
   }
 }

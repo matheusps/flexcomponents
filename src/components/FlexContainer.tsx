@@ -9,6 +9,7 @@ const FlexContainer: React.FC<Container> = ({ children, themed, ...props }) => {
   return (
     <div
       style={{
+        boxSizing: 'border-box',
         order: props.order,
         flexShrink: props.shrink,
         flexGrow: props.grow,
