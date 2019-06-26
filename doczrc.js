@@ -1,5 +1,5 @@
 export default {
-  title: 'Flexible',
+  title: 'Flex Components',
   files: '**/*.{md,markdown,mdx}',
   themeConfig: {
     mode: 'light'

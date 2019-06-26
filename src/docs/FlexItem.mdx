@@ -1,0 +1,22 @@
+---
+## name: Flex Item
+---
+
+import { Playground, Props } from 'docz'
+import { ThemeProvider } from '../components/ThemeProvider.tsx'
+import { FlexContainer } from '../components/FlexContainer.tsx'
+import { FlexItem } from '../components/FlexItem.tsx'
+
+# Flex
+
+<Playground>
+  <ThemeProvider>
+    <FlexContainer>
+      <FlexItem>A</FlexItem> <FlexItem>B</FlexItem> <FlexItem>C</FlexItem>
+    </FlexContainer>
+  </ThemeProvider>
+</Playground>
+
+## Detailed Props
+
+<Props of={FlexItem} />

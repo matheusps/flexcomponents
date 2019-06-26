@@ -25,29 +25,29 @@ export type NativeDiv = DetailedHTMLProps<
 >
 
 export interface Item extends NativeDiv {
-  /** If subscribes to theme provider or not */
+  /** If subscribes to the theme provider or not */
   themed?: boolean
-  /** element order */
+  /** Element order */
   order?: number
-  /** element grow */
+  /** Element grow */
   grow?: number
-  /** element shrink */
+  /** Element shrink */
   shrink?: number
-  /** flex-basis */
+  /** CSS prop flex-basis */
   basis?: 'auto' | number
-  /** align-self */
+  /** CSS prop align-self */
   self?: 'auto' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
 }
 
 /** A container itself can be an item */
 export interface Container extends Item {
-  /** if is inline-flex */
+  /** If is inline-flex */
   inline?: boolean
-  /** flex-direction */
+  /** CSS prop flex-direction */
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse'
-  /** flex-wrap */
+  /** CSS prop flex-wrap */
   wrap?: 'nowrap' | 'wrap' | 'wrap-reverse'
-  /** justify-content */
+  /** CSS prop justify-content */
   justify?:
     | 'flex-start'
     | 'flex-end'
@@ -55,9 +55,9 @@ export interface Container extends Item {
     | 'space-between'
     | 'space-around'
     | 'space-evenly'
-  /** align-items */
+  /** CSS prop align-items */
   items?: 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
-  /** align-content */
+  /** CSS prop align-content */
   content?:
     | 'flex-start'
     | 'flex-end'
