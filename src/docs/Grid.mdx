@@ -1,0 +1,27 @@
+---
+## name: Grid
+---
+
+import { Playground, Props } from 'docz'
+import { ThemeProvider } from '../components/ThemeProvider.tsx'
+import { FlexContainer } from '../components/FlexContainer.tsx'
+import { Row } from '../components/Row.tsx'
+import { Col } from '../components/Col.tsx'
+
+# Grid
+
+<Playground>
+  <Row style={{ width: '100%', color: 'black' }}>
+    <Col size={6} style={{ color: 'white' }}>
+      1
+    </Col>
+    <Col size={6} style={{ color: 'white' }}>
+      2
+    </Col>
+  </Row>
+</Playground>
+
+## Detailed Props
+
+<Props of={Row} />
+<Props of={Col} />

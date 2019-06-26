@@ -34,7 +34,7 @@ export interface Item extends NativeDiv {
   /** Element shrink */
   shrink?: number
   /** CSS prop flex-basis */
-  basis?: 'auto' | number
+  basis?: 'auto' | string
   /** CSS prop align-self */
   self?: 'auto' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
 }
