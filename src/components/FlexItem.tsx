@@ -1,11 +1,7 @@
 import * as React from 'react'
-import { useTheme } from '../hooks/useTheme'
 import { Item } from '../typings'
 
-const FlexItem: React.FC<Item> = ({ children, themed, ...props }) => {
-  const { item } = useTheme()
-  const styles = themed ? item : {}
-
+const FlexItem: React.FC<Item> = ({ children, ...props }) => {
   return (
     <div
       style={{
@@ -14,8 +10,7 @@ const FlexItem: React.FC<Item> = ({ children, themed, ...props }) => {
         flexShrink: props.shrink,
         flexGrow: props.grow,
         flexBasis: props.basis,
-        alignSelf: props.self,
-        ...styles
+        alignSelf: props.self
       }}
     >
       {children}
@@ -24,7 +19,6 @@ const FlexItem: React.FC<Item> = ({ children, themed, ...props }) => {
 }
 
 FlexItem.defaultProps = {
-  themed: true,
   order: 0,
   shrink: 1,
   grow: 0,

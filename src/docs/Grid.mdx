@@ -3,7 +3,6 @@
 ---
 
 import { Playground, Props } from 'docz'
-import { ThemeProvider } from '../components/ThemeProvider.tsx'
 import { FlexContainer } from '../components/FlexContainer.tsx'
 import { Row } from '../components/Row.tsx'
 import { Col } from '../components/Col.tsx'
@@ -11,19 +10,17 @@ import { Col } from '../components/Col.tsx'
 # Grid
 
 <Playground>
-  <ThemeProvider>
-    <Row style={{ width: '100%', color: 'black' }}>
-      <Col size={3}>
-        <h3>Something</h3>
-      </Col>
-      <Col size={3}>
-        <h3>Something</h3>
-      </Col>
-      <Col size={6}>
-        <h3>Something 2</h3>
-      </Col>
-    </Row>
-  </ThemeProvider>
+  <Row>
+    <Col size={3}>
+      <h3>Something</h3>
+    </Col>
+    <Col size={3}>
+      <h3>Something</h3>
+    </Col>
+    <Col size={6}>
+      <h3>Something 2</h3>
+    </Col>
+  </Row>
 </Playground>
 
 ## Detailed Props

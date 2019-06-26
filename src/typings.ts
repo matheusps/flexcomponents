@@ -1,24 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
 
-export interface Theme {
-  container: {
-    backgroundColor: string
-    color: string
-    boxShadow: string
-    borderRadius: string
-    margin: string
-    padding: string
-  }
-  item: {
-    backgroundColor: string
-    color: string
-    boxShadow: string
-    borderRadius: string
-    margin: string
-    padding: string
-  }
-}
-
 export type NativeDiv = DetailedHTMLProps<
   HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
@@ -37,6 +18,8 @@ export interface Item extends NativeDiv {
   basis?: 'auto' | string
   /** CSS prop align-self */
   self?: 'auto' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
+  padding?: Measure
+  margin?: Measure
 }
 
 /** A container itself can be an item */
@@ -66,3 +49,5 @@ export interface Container extends Item {
     | 'space-around'
     | 'stretch'
 }
+
+export type Measure = 'none' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'

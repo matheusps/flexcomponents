@@ -1,11 +1,7 @@
 import * as React from 'react'
 import { Container } from '../typings'
-import { useTheme } from '../hooks/useTheme'
 
-const FlexContainer: React.FC<Container> = ({ children, themed, ...props }) => {
-  const { container } = useTheme()
-  const styles = themed ? container : {}
-
+const FlexContainer: React.FC<Container> = ({ children, ...props }) => {
   return (
     <div
       style={{
@@ -20,8 +16,7 @@ const FlexContainer: React.FC<Container> = ({ children, themed, ...props }) => {
         flexWrap: props.wrap,
         justifyContent: props.justify,
         alignItems: props.items,
-        alignContent: props.content,
-        ...styles
+        alignContent: props.content
       }}
     >
       {children}
@@ -30,7 +25,6 @@ const FlexContainer: React.FC<Container> = ({ children, themed, ...props }) => {
 }
 
 FlexContainer.defaultProps = {
-  themed: true,
   order: 0,
   shrink: 1,
   grow: 0,
