@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Container } from '../typings'
+import { IContainer } from '../typings'
 
-const FlexContainer: React.FC<Container> = ({ children, ...props }) => {
+const FlexContainer: React.FC<IContainer> = ({ children, ...props }) => {
   return (
     <div
       style={{

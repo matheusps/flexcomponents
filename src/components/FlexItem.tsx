@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Item } from '../typings'
+import { IItem } from '../typings'
 
-const FlexItem: React.FC<Item> = ({ children, ...props }) => {
+const FlexItem: React.FC<IItem> = ({ children, ...props }) => {
   return (
     <div
       style={{

@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { FlexContainer } from './FlexContainer'
-import { Container } from '../typings'
+import { IContainer } from '../typings'
 
-const Row: React.FC<Container> = ({ children, style, ...props }) => {
+const Row: React.FC<IContainer> = ({ children, style, ...props }) => {
   return (
     <FlexContainer
       direction="row"
